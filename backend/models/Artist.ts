@@ -3,14 +3,15 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 const ArtistSchema = new Schema({
-    shortUrl: {
-        type: String,
-        required: true,
-        unique: true
-    },
-    originalUrl: {
+    name: {
         type: String,
         required: true
+    },
+    photo: {
+        type: String
+    },
+    info: {
+        type: String
     }
 });
 
