@@ -22,17 +22,17 @@ const SALT_WORK_FACTOR = 10;
 const UserSchema = new Schema<UserFields, UserModel, UserMethods>({
     username: {
         type: String,
-        required: true,
+        required: [true, 'Username is required'],
         unique: true,
     },
 
     password: {
         type: String,
-        required: true,
+        required: [true, 'Password is required'],
     },
     token: {
         type: String,
-        required: true,
+        required: [true, 'Token is required'],
     }
 });
 

@@ -29,7 +29,7 @@ usersRouter.post('/sessions', async (req, res, next) => {
         if (!user) {
             res.status(404).send('User not found');
             return;
-        };
+        }
 
         const isMatch = await user.checkPassword(req.body.password);
 
